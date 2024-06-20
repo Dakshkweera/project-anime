@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    /* height: 100vh; */
+    width: 100vw;
+    /* background-color: rgb(246, 246, 246); */
+    background-color: rgb(247, 245, 243);
+    overflow: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+        
+        }
+        
+    .navcontainer{
+        width: 100%;
+        height: 80px;
+        /* background-color: aquamarine; */
+        background: #70e1f5;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* overflow-x: none; */
+    }
+    
+    nav{
+        width: 100%;
+    }
+    
+    #l1{
+        /* margin-left: 15px;
+        margin-right: 15px; */
+        padding-left: 15px;
+        padding-right: 15px;
+        list-style: none;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    #p1{
+        font-size: 2.5rem;
+        color: rgb(255, 255, 255);
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    
+    #info{
+        display: flex;
+        gap: 20px;
+        color: aliceblue;
+    }
+    .footer{
+    /* ackground-color: aqua; */
+    background: #70e1f5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    /* text-align: center; */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+
+
+
+input[type=text],select,textarea{
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit]{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+}
+
+input[type=submit]:hover{
+    background-color: #45a049;
+}
+
+.content{
+    width: 75%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; */
+    box-shadow: 3px 3px 20px black;
+
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navcontainer">
+                <nav>
+                    <ul id="l1">
+                        <li>
+                            <P id="p1">OtakuRealm</P>
+                        </li>
+                        <li>
+                          <div id="info">
+                            <a href="index.html">home</a>
+                            <a href="contact.html">contact us</a>
+                            <a href="index.html">about</a>
+                          </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="content">
+                <form action="action_page.php">
+
+                    <label for="fname">First name</label>
+                    <input type="text" id="fname" name="first name" placeholder="Your name..">
+
+                    <br><br>
+
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" name="last name" placeholder="your last name..">
+
+                    <br><br>
+
+                    <label for="email">E-mail   </label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email...">
+
+                    <br><br>
+
+                    <label for="country">Country  </label>
+                    <select id="country" name="country">
+                        <option
+                        value="Australia">Australia</option>
+                        <option
+                        value="canada">Canada</option>
+                        <option
+                        value="india">India</option>
+                        <option
+                        value="usa">USA</option>
+                        <option
+                        value="other">Other</option>
+
+                    </select>
+
+                    <br><br>
+
+                    <label for="subject">Subject  </label>
+                    <textarea id="subject" name="subject" placeholder="Write here.." 
+                    style="height: 200px"></textarea>
+
+                    <br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer">
+                <P>
+                    copyright &copy; OtakuRealm Pvt Ltd 2024 All Rights Reserved
+                </P>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
